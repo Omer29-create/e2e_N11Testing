@@ -1,4 +1,6 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -44,5 +46,16 @@ public class N11_UrunEkleme {
 
     }
 
+    @AfterEach
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.quit();
+    }
+
+    @Test
+    @Disabled("Bu test gecici olarak devre disi birakildi")
+    public void testN11_2() {
+        // method 
+    }
 
 }
